@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .tab_navigation {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .tab_navigation li {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #0a6fc4;
+            min-width: 100px;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .tab_navigation li.active, .tab_navigation li:hover {
+            background: #035091;
+        }
+        /* .tab_container_area {} */
+        .tab_container {
+            padding: 10px;
+            background: #035091;
+            color: #fff;
+            border-radius: 0 5px 5px 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="tab_navigation">
+            <li>Tab 1</li>
+            <li>Tab 2</li>
+            <li>Tab 3</li>
+            <li>Tab 4</li>
+        </ul>
+        <div class="tab_container_area">
+            <div class="tab_container">
+                <h1>Tab 1</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta harum porro magni pariatur ducimus reiciendis vitae. Incidunt ipsa quidem sapiente dolor! Quis autem magnam ut iste tempore modi culpa hic, quidem aliquid aliquam odio nulla quas, animi ratione, alias quibusdam?</p>
+            </div>
+            <div class="tab_container">
+                <h1>Tab 2</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta harum porro magni pariatur ducimus reiciendis vitae. Incidunt ipsa quidem sapiente dolor! Quis autem magnam ut iste tempore modi culpa hic, quidem aliquid aliquam odio nulla quas, animi ratione, alias quibusdam?</p>
+            </div>
+            <div class="tab_container">
+                <h1>Tab 3</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta harum porro magni pariatur ducimus reiciendis vitae. Incidunt ipsa quidem sapiente dolor! Quis autem magnam ut iste tempore modi culpa hic, quidem aliquid aliquam odio nulla quas, animi ratione, alias quibusdam?</p>
+            </div>
+            <div class="tab_container">
+                <h1>Tab 4</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta harum porro magni pariatur ducimus reiciendis vitae. Incidunt ipsa quidem sapiente dolor! Quis autem magnam ut iste tempore modi culpa hic, quidem aliquid aliquam odio nulla quas, animi ratione, alias quibusdam?</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function () {
+        $('.tab_container:first').show();
+        $('.tab_navigation li:first').addClass('active');
+        $('.tab_navigation li').click(function(event){
+            index = $(this).index();
+            $('.tab_navigation li').removeClass('active');
+            $(this).addClass('active');
+            $('.tab_container').hide();
+            $('.tab_container').eq(index).show();
+
+        });
+    });
+</script>
+</body>
+</html>

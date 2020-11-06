@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #585858;
+
+    header nav {
+        background-color: white;
+        color: #585858;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+
+        h1 {
+            margin-left: 0.75em;
+        }
+
+        h1:hover {
+            color: rgba(255, 88, 88, 0.5);
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            margin-left: auto;
+            padding-right: 1.75em;
+            a {
+                margin-right: 1em;
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                color: rgba(255, 88, 88, 0.5);
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 100px);
+
+        #one {
+            width: 25%;
+            height: 100%;
+            border-right: 1px solid rgba(255, 88, 88, 0.5);
+
+            .tab {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3em;
+
+                #home-icon,
+                .tablinks {
+                    width: 90%;
+                    padding: 1em 0;
+                    border-radius: 0.5em;
+                    margin: 0.3em 0;
+                    cursor: pointer;
+                    color: white;
+                    background: rgb(98, 97, 98);
+                    background: linear-gradient(180deg, rgba(98, 97, 98, 1) 0%, rgba(0, 0, 0, 0.5) 30%);
+                    border: 1px solid rgba(255, 88, 88, 0.5);
+                }
+                #home-icon:hover {
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    color: rgba(255, 88, 88, 0.5);
+                }
+                .tablinks:hover, .tablinks:hover, .tablinks:active {
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    color: rgba(255, 88, 88, 0.5);
+                }
+                
+            }
+        }
+
+        #two {
+            width: 75%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            .charts {
+                width: 90%;
+                height: calc(100% - 120px);
+                background-color: #fff;
+                border-radius: 0.75em;
+                .tabcontent {
+                        position: relative;
+                        width: 60vw;
+                        height: 55vh;
+                        margin: auto;
+                        display: none;
+                        // transition: all 1000ms ease-in-out;
+                    h3 {
+                        margin:1em;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #000;
+        height: 50px;
+        padding-right: 2.5em;
+        color: rgba(255, 88, 88, 0.5);
+        clear: both;
+    }
+}
+

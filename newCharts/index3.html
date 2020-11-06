@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>New Charts</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>Dashboard</h1>
+                <section>
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </section>
+
+            </nav>
+        </header>
+        <main class="content">
+            <section id=one>
+                
+                <div class="tab">
+                    <button id="home-icon"><i class="fa fa-home" style="font-size:24px"></i>  Home</button>
+                    <button class="tablinks"><i class="fa fa-line-chart" style="font-size:24px"></i>  Line Chart</button>
+                    <button class="tablinks"><i class="fa fa-bar-chart" style="font-size:24px"></i>  Bar Chart</button>
+                    <button class="tablinks"><i class="fa fa-pie-chart" style="font-size:24px"></i>  Pie Chart</button>
+                  </div>
+            </section>
+            <section id="two">
+                <div class="charts">
+                <div class="tabcontent"></div>
+                <div id="line" class="tabcontent">
+                    <h3>Line Chart</h3><hr>
+                    <canvas id="myChart1" aria-label="My Chart 1" role="chart"></canvas>
+                
+                  </div>
+                  
+                  <div id="bar" class="tabcontent">
+                    <h3>Bar Chart</h3><hr>
+                    <canvas id="myChart2" aria-label="My Chart 1" role="chart"></canvas>
+                  </div>
+                  
+                  <div id="pie" class="tabcontent">
+                    <h3>Pie Chart</h3><hr>
+                    <canvas id="myChart3" aria-label="My Chart 1" role="chart"></canvas>
+                  </div>
+                </div>
+            </section>
+        </main>
+        <footer> Dashboard &copy; 2020</footer>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/app3.js"></script>
+</body>
+
+</html>
